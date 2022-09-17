@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../pages/HomePage.vue";
 import AboutPage from "../pages/HomePage.vue";
 import BrazilPage from "../pages/BrazilPage";
-import HawaiPage from "../pages/HawaiPage";
+import HawaiiPage from "../pages/HawaiiPage";
 import JamaicaPage from "../pages/JamaicaPage";
 import PanamaPage from "../pages/PanamaPage";
 
@@ -23,9 +23,9 @@ const routes = [
         component: BrazilPage,
     },
     {
-        path: "/hawai",
-        name: "hawai",
-        component: HawaiPage,
+        path: "/hawaii",
+        name: "hawaii",
+        component: HawaiiPage,
     },
     {
         path: "/jamaica",
