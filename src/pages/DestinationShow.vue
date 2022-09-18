@@ -22,16 +22,15 @@
                 return parseInt(this.$route.params.id) 
             },
         },
-        async created() {
-            const response = await fetch(`https://travel-dummy-api.netlify.app/${this.$route.params.slug}`)
-            this.destination = await response.json()
-            this.$watch(
-                () => this.$route.params,
-                async ()=>{
-                    const response = await fetch(`https://travel-dummy-api.netlify.app/${this.$route.params.slug}`)
-                    this.destination = await response.json()
-                } 
-            )
+        methods:{
+            async initData(){
+                const response = await fetch(`https://travel-dummy-api.netlify.app/${this.$route.params.slug}`)
+                this.destination = await response.json()
+            }
+        },
+        async created(){
+            this.initData()
+            this.$watch(() => this.$route.params, this.initData)
         }
     }
 </script>
