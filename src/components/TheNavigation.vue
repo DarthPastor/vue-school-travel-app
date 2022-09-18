@@ -7,3 +7,10 @@
         <router-link to="/panama">Panama</router-link>        
     </div>
 </template>
+
+<style lang="css">
+    #nav .vue-school-active-link {
+        color: #52c09b;
+        border-bottom: 2px solid #52c09b;
+    }
+</style>

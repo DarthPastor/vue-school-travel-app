@@ -23,11 +23,15 @@ const routes = [
         name: "panama", 
         component: () => import ("../pages/PanamaPage") 
     },
+    {
+        path: "/destination/:id", name:"destination.show", component: ()=>import('@/pages/DestinationShow.vue')
+    }
 ];
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes,
+    linkActiveClass: "vue-school-active-link"
 });
 
 export default router;
